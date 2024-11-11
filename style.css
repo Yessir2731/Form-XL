@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+form, #historyContainer {
+    width: 100%;
+    max-width: 800px; /* Membatasi lebar maksimal untuk kenyamanan baca */
+    margin-top: 20px;
+}
+
+form label, form input, form select, form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+#historyContainer {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#historyContainer th, #historyContainer td {
+    padding: 12px;
+    text-align: left; /* Membuat kolom rata kiri */
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word; /* Agar teks tidak keluar kolom */
+}
+
+#historyContainer th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+#historyContainer tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+    #historyContainer, form {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    #historyContainer th, #historyContainer td {
+        padding: 8px;
+    }
+}
