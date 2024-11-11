@@ -1,3 +1,8 @@
+<?php
+require 'sumbit_form.php'
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +13,7 @@
 </head>
 <body>
     <h2>Form Pengambilan Item P3K</h2>
-    <form onsubmit="event.preventDefault(); submitForm('Pengambilan P3K')">
+    <form method="post" action="sumbit_form.php">
         <input type="text" name="Nama" placeholder="Nama" required>
         <input type="date" name="Tanggal" required>
         <select name="Barang" required>
@@ -40,8 +45,20 @@
         <thead>
             <tr><th>Nama</th><th>Tanggal</th><th>Barang</th><th>Jumlah</th></tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+            <?php if ($history): ?>
+                <?php foreach ($history as $row): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($row['nama']); ?></td>
+                        <td><?php echo htmlspecialchars($row['tanggal']); ?></td>
+                        <td><?php echo htmlspecialchars($row['barang']); ?></td>
+                        <td><?php echo htmlspecialchars($row['jumlah']); ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <tr><td colspan="4">No history available.</td></tr>
+            <?php endif; ?>
+        </tbody>
     </table>
-    <script src="script.js"></script>
 </body>
 </html>

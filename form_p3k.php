@@ -6,9 +6,9 @@
     <title>Form Pengecekan Kotak P3K</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-protected="true">
+<body>
     <h2>Form Pengecekan Kotak P3K</h2>
-    <form id="form_p3k">
+    <form method="post">
         <input type="text" name="Nama Pengecek" placeholder="Nama Pengecek" required>
         <input type="date" name="Tanggal" required>
         <select name="Kotak P3K" required>
@@ -40,36 +40,5 @@
         <!-- Tambahkan input sesuai kebutuhan -->
         <button type="submit">Submit</button>
     </form>
-    <h3>History</h3>
-    <table id="historyContainer">
-        <thead>
-            <tr><th>Nama Pengecek</th>
-                <th>Tanggal</th>
-                <th>Kotak P3K</th>
-                <th>Kasa Steril</th>
-                <th>Perban (5 cm)</th>
-                <th>Perban (10 cm)</th>
-                <th>Plester (lebar 1,25 cm)</th>
-                <th>Plester cepat hansaplast</th>
-                <th>Kapas pembalut (50 gram)</th>
-                <th>Kain segitiga</th>
-                <th>Peniti</th>
-                <th>Sarung tangan sekali pakai</th>
-                <th>Masker</th>
-                <th>Pinset</th>
-                <th>Pen Light</th>
-                <th>Gelas untuk cuci mata</th>
-                <th>Kantong plastik bersih</th>
-                <th>Aquades @100 ml</th>
-                <th>Povidon lodin (60 ml)</th>
-                <th>Alkohol 70%</th>
-                <th>Buku Panduan P3K</th>
-                <th>Lembar Catatan</th>
-                <th>Daftar isi kotak</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-    <script src="script.js"></script>
 </body>
 </html>

@@ -6,9 +6,9 @@
     <title>Form APAR</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-protected="true">
+<body>
     <h2>Form APAR</h2>
-    <form onsubmit="event.preventDefault(); submitForm('APAR')">
+    <form method="post">
         <label for="name">Nama:</label>
         <input type="text" id="name" required>
         <label for="date">Tanggal:</label>
@@ -29,6 +29,5 @@
         </thead>
         <tbody></tbody>
     </table>
-    <script src="script.js"></script>
 </body>
 </html>
