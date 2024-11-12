@@ -1,5 +1,5 @@
 <?php
-require 'sumbit_form.php'
+require './database/sumbit_form.php'
 ?>
 
 
@@ -9,11 +9,11 @@ require 'sumbit_form.php'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Pengambilan Item P3K</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <h2>Form Pengambilan Item P3K</h2>
-    <form method="post" action="sumbit_form.php">
+    <form method="post" action="./database/sumbit_form.php">
         <input type="text" name="Nama" placeholder="Nama" required>
         <input type="date" name="Tanggal" required>
         <select name="Barang" required>
@@ -48,7 +48,7 @@ require 'sumbit_form.php'
         <tbody>
             <?php if ($history): ?>
                 <?php foreach ($history as $row): ?>
-                    <tr>
+                    <tr id="historyContent">
                         <td><?php echo htmlspecialchars($row['nama']); ?></td>
                         <td><?php echo htmlspecialchars($row['tanggal']); ?></td>
                         <td><?php echo htmlspecialchars($row['barang']); ?></td>
