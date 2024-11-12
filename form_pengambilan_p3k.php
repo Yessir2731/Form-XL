@@ -1,5 +1,5 @@
 <?php
-require './database/sumbit_form.php'
+require './database/submit_form_pengambilan.php'
 ?>
 
 
@@ -13,7 +13,7 @@ require './database/sumbit_form.php'
 </head>
 <body>
     <h2>Form Pengambilan Item P3K</h2>
-    <form method="post" action="./database/sumbit_form.php">
+    <form method="post" action="./database/submit_form_pengambilan.php">
         <input type="text" name="Nama" placeholder="Nama" required>
         <input type="date" name="Tanggal" required>
         <select name="Barang" required>
