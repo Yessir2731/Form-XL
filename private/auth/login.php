@@ -36,14 +36,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>login page</title>
 </head>
 <body>
-    
-    
-    <h2>login</h2>
-    <form method="POST">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-    </form>
-    
+    <div class="login">
+        <div class="card">
+            <div class="card-body">  
+                <img src="../../image/XL_logo_2016.svg.png" alt="logo" class="upper-logo">         
+                <h2>LOGIN</h2>
+                <p>login untuk mengakses form pengecekan</p>
+                <form method="POST">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">LOGIN</button>
+                </form>
+                <img src="../../image/LOGO.png" alt="logo" class="bottom-logo">
+            </div>
+        </div>
+    </div>
+        
 </body>
 </html>

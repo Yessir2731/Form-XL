@@ -18,6 +18,7 @@ require '../database/submit_form.php'
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
+<div class="form-pengecekan">
     <h2>Form Pengecekan Wire Closet</h2>
     <form method="post" action="../database/submit_form.php">
         <input type="text" name="Nama" placeholder="Nama" required>
@@ -26,19 +27,20 @@ require '../database/submit_form.php'
         <button type="submit">Submit</button>
     </form>
     <h3>Pengecekan Wire Closet History</h3>
-<table>
-    <thead>
-        <tr><th>Nama</th><th>Tanggal</th><th>Activity</th></tr>
-    </thead>
-    <tbody>
-        <?php foreach ($wire_history as $history) { ?>
-            <tr>
-                <td><?= htmlspecialchars($history['nama']) ?></td>
-                <td><?= htmlspecialchars($history['tanggal']) ?></td>
-                <td><?= htmlspecialchars($history['activity']) ?></td>
-            </tr>
-        <?php } ?>
-    </tbody>
-</table>
+    <table>
+        <thead>
+            <tr><th>Nama</th><th>Tanggal</th><th>Activity</th></tr>
+        </thead>
+        <tbody>
+            <?php foreach ($wire_history as $history) { ?>
+                <tr>
+                    <td><?= htmlspecialchars($history['nama']) ?></td>
+                    <td><?= htmlspecialchars($history['tanggal']) ?></td>
+                    <td><?= htmlspecialchars($history['activity']) ?></td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

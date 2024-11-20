@@ -19,7 +19,9 @@ require '../database/submit_form.php'
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-<h2>Form Pengecekan APAR</h2>
+<div class="form-pengecekan">
+
+    <h2>Form Pengecekan APAR</h2>
     <form method="post" action="../database/submit_form.php">
         <!-- APAR Form -->
         <input type="text" name="name" placeholder="Nama Pengecek" required>
@@ -45,8 +47,9 @@ require '../database/submit_form.php'
                     <td><?= htmlspecialchars($history['item']) ?></td>
                     <td><?= htmlspecialchars($history['quantity']) ?></td>
                 </tr>
-            <?php } ?>
-        </tbody>
-    </table>
+                <?php } ?>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

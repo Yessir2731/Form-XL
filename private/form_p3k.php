@@ -18,6 +18,8 @@ require '../database/submit_form.php';
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
+<div class="form-pengecekan">
+
     <h2>Form Pengecekan Kotak P3K</h2>
     <form method="post">
         <!-- P3K Form -->
@@ -51,7 +53,7 @@ require '../database/submit_form.php';
         <input type="number" name="daftar_isi_kotak" placeholder="Jumlah Daftar Isi Kotak">
         <button type="submit">Submit P3K</button>
     </form>
-
+    
     
     <h3>P3K History</h3>
     <table>
@@ -66,8 +68,8 @@ require '../database/submit_form.php';
                     <td><?= htmlspecialchars($history['kotak_p3k']) ?></td>
                     <td>Other P3K items...</td>
                 </tr>
-            <?php } ?>
-        </tbody>
-    </table>
-    
+                <?php } ?>
+            </tbody>
+        </table>
+    </div>
 </body>

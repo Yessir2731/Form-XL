@@ -6,15 +6,26 @@
 
 :root{
     --blue: #0B50A0;
+    --lightblue: #1E46C3;
+    --ligthgreen: #00C8A1;
+    --darkblue: #1C24C6;
+}
 
+.form-pengecekan{
+    display: flex;
+    align-items: center;
+    flex-direction: column  ;
+    margin-top: 20px;
 }
 
 
-body {
+.login {
     font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
     align-items: center;
+    background-color: var(--blue);
 }
 
 .Container{
@@ -35,25 +46,94 @@ align-items: center;
 
 }
 
+.card {
+    border-radius: 46px;
+    width: 500px;
+    box-shadow: 2px 7px 13px 0px rgba(0,0,0,0.2);
+    overflow: hidden; 
+}
+.card-body{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    background-color: #fffcfc;
+    flex-grow: 1;
+    padding: 26px; 
+}
+
+.upper-logo{
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.bottom-logo{
+    width: 100px;
+    margin-top: 10px;
+}
+
+.card-body p{
+    margin-top: 4px ;
+    color: #888;
+    text-align: center;
+}
+
 form {
     width: 100%;
     max-width: 800px; /* Membatasi lebar maksimal untuk kenyamanan baca */
     margin-top: 20px;
 }
 
-form label, form input, form select, form button {
+form label, form input, form select{
     width: 100%;
     margin-bottom: 15px;
-    padding: 8px;
-    font-size: 16px;
+    padding: 8px 22px 8px 22px;
+    
     box-sizing: border-box;
+    border-radius: 10px;
+    border: solid 2px var(--darkblue);
+    
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: bold;
+    
+
+}
+
+form input:focus{
+    outline: none;
+    border: solid 2px var(--darkblue);
+}
+
+form input::placeholder{
+    color: var(--darkblue);
+    font-weight: bold   ;
 }
 
 button {
-    padding: 10px 15px;
+    padding: 10px 20px;
     font-size: 16px;
+    float: right;
+    background-color: var(--darkblue) ;
+    color: white;
+    border-radius: 26px;
+    border: none;
 }
 
 td{
     padding: 20px;
+}
+
+
+@media (max-width: 360px) {
+    .card{
+        width: 300px;
+    }
+
+    .card-body .upper-logo{
+        width: 150px;
+    }
+
+    .card-body .bottom-logo{
+        width: 90px;
+    }
 }

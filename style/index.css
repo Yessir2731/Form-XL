@@ -14,6 +14,7 @@
 
 body{
     background-color: var(--blue);
+    height: 100vh;
 }
 
 
@@ -36,6 +37,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 50px ;
 }
 
 .card {
@@ -68,23 +70,54 @@ body{
     width: 120px;
 }
 
-
-.Container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+.icon-p3k{
+    transition: content 
 }
 
-
-.Content{
-display: flex;
-background-color: white;
-border-radius: 10px;
+.icon-p3k:hover{
+    content: url("../image/hugeicons_first-aid-kit-hover.png");
+    opacity: 0.8;
 }
-
 .content_auth{
     display: flex;
-    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+}
 
+
+.content{
+    text-decoration: none;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 10px;
+    color: var(--lightblue);
+    padding: 20px;
+    margin: 10px;
+}
+
+@media (max-width: 360px) {
+    .card-container{
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .card{
+        width: 300px;
+        margin: 10px;
+        border-radius: 36px;
+    }
+
+    .card-body
+    {
+        padding: 4px;
+    }  
+
+    .card-text{
+        font-size: 24px;
+        
+    }
+
+    .icon{
+        width: 90px;
+    }
 }
