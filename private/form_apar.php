@@ -19,6 +19,9 @@ require '../database/submit_form.php'
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
+<div class="back-button">
+        <a href="../index.php"><img src="../image/weui_back-outlined.png" alt="button-back"></a>
+    </div>
 <div class="form-pengecekan">
 
     <h2>Form Pengecekan APAR</h2>

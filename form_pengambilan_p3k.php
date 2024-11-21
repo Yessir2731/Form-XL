@@ -12,9 +12,13 @@ require './database/submit_form_pengambilan.php'
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <h2>Form Pengambilan Item P3K</h2>
-    <form method="post" action="./database/submit_form_pengambilan.php">
-        <input type="text" name="Nama" placeholder="Nama" required>
+<div class="back-button">
+        <a href="index.php"><img src="image/weui_back-outlined.png" alt="button-back"></a>
+    </div>
+    <h2 class="title">Form Pengambilan Item P3K</h2>
+    <div class="form-pengecekan">
+        <form method="post" action="./database/submit_form_pengambilan.php">
+            <input type="text" name="Nama" placeholder="Nama" required>
         <input type="date" name="Tanggal" required>
         <select name="Barang" required>
             <option value="">Pilih Barang</option>
@@ -54,11 +58,12 @@ require './database/submit_form_pengambilan.php'
                         <td><?php echo htmlspecialchars($row['barang']); ?></td>
                         <td><?php echo htmlspecialchars($row['jumlah']); ?></td>
                     </tr>
-                <?php endforeach; ?>
-            <?php else: ?>
+                    <?php endforeach; ?>
+                    <?php else: ?>
                 <tr><td colspan="4">No history available.</td></tr>
-            <?php endif; ?>
-        </tbody>
-    </table>
+                <?php endif; ?>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

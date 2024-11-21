@@ -1,123 +1,167 @@
-*{
+/* General Reset and Global Styles */
+* {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-:root{
+:root {
     --blue: #0B50A0;
     --lightblue: #1E46C3;
     --ligthgreen: #00C8A1;
+    --darkblue: #1C24C6;
 }
 
-
-body{
+body {
     background-color: var(--blue);
     height: 100vh;
 }
 
-
-.title{
+/* Title Section */
+.title {
     display: flex;
     justify-content: center;
+    margin: 20px 0;
 }
 
-.title h1{
+.title h1 {
+    display: flex;
+    align-items: center;
     color: white;
-    border-radius: 10px;
-    margin: 20px;
-    padding: 30px;
-    background: rgb(30,70,195);
     background: linear-gradient(90deg, var(--lightblue) 0%, var(--ligthgreen) 100%);
+    border-radius: 10px;
+    padding: 15px 35px;
 }
 
+.title img {
+    margin-left: 2rem;
+}
 
-.card-container{
+span{
+    color: white;
+    background: linear-gradient(90deg, var(--lightblue) 0%, var(--ligthgreen) 100%);
+    padding: 10px 20px;
+    border-radius: 36px;
+        
+}
+
+/* Card Container */
+.card-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 50px ;
+    flex-wrap: wrap; /* Ensures cards adjust for smaller screens */
 }
 
 .card {
-    display: flex; 
-    flex-direction: column; 
-    border-radius: 46px;
+    display: flex;
+    flex-direction: column;
     width: 350px;
-    box-shadow: 2px 7px 13px 0px rgba(0,0,0,0.2);
-    overflow: hidden; 
-}
-.card-body{
-    background-color: #fffcfc;
-    flex-grow: 1;
-    padding: 8px; 
+    border-radius: 46px;
+    box-shadow: 2px 7px 13px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 10px; /* Adds spacing between cards */
 }
 
-.card-text{
+.card-body {
+    background-color: #fffcfc;
+    padding: 8px;
+    flex-grow: 1;
+}
+
+.card-text {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    line-height: 1.4;
-    
     font-size: 30px;
     font-weight: bold;
-    color: var(--lightblue);   
+    color: var(--lightblue);
     text-decoration: none;
+    line-height: 1.4;
 }
 
-.icon{
+.icon {
     width: 120px;
 }
 
-.icon-p3k{
-    transition: content 
+
+/* Logo */
+.logo-xl {
+    margin: 10px;
+    width: 3.6rem;
 }
 
-.icon-p3k:hover{
-    content: url("../image/hugeicons_first-aid-kit-hover.png");
-    opacity: 0.8;
-}
-.content_auth{
+/* Authentication Buttons */
+.content_auth {
     display: flex;
-    justify-content: right;
-    align-items: end;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
 }
 
-
-.content{
+.content {
     text-decoration: none;
     font-weight: bold;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 28px;
     color: var(--lightblue);
-    padding: 20px;
-    margin: 10px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-@media (max-width: 360px) {
-    .card-container{
+.content:hover {
+    background-color: var(--ligthgreen);
+    color: white;
+}
+
+/* Responsive Styles */
+/* Mobile */
+@media (max-width: 480px) {
+    .card-container {
         flex-direction: column;
         margin: 10px;
     }
 
-    .card{
+    .card {
         width: 300px;
-        margin: 10px;
         border-radius: 36px;
     }
 
-    .card-body
-    {
+    .card-body {
         padding: 4px;
-    }  
-
-    .card-text{
-        font-size: 24px;
-        
     }
 
-    .icon{
+    .card-text {
+        font-size: 24px;
+    }
+
+    .icon {
         width: 90px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .card {
+        width: 400px;
+        border-radius: 36px;
+    }
+
+    .card-body {
+        padding: 12px;
+    }
+
+    .card-text {
+        font-size: 28px;
+    }
+
+    .icon {
+        width: 100px;
     }
 }

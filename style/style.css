@@ -1,139 +1,199 @@
-*{
+/* General Reset and Global Variables */
+* {
     margin: 0;
     padding: 0;
 }
 
-
-:root{
+:root {
     --blue: #0B50A0;
     --lightblue: #1E46C3;
-    --ligthgreen: #00C8A1;
     --darkblue: #1C24C6;
+    --ligthgreen: #00C8A1;
 }
 
-.form-pengecekan{
-    display: flex;
-    align-items: center;
-    flex-direction: column  ;
-    margin-top: 20px;
-}
-
-
-.login {
-    font-family: Arial, sans-serif;
-    display: flex;
+/* Global Styles */
+body {
+    background-color: var(--blue);
     height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Title Section */
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+/* Login Section */
+.login {
+    display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     background-color: var(--blue);
 }
 
-.Container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.Content{
-display: flex;
-align-items: center;
-}
-
-.content_auth{
-    display: flex;
-    flex-direction: column;
-
-}
-
 .card {
-    border-radius: 46px;
     width: 500px;
-    box-shadow: 2px 7px 13px 0px rgba(0,0,0,0.2);
-    overflow: hidden; 
+    border-radius: 46px;
+    box-shadow: 2px 7px 13px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
-.card-body{
-    display: flex; 
-    flex-direction: column; 
+
+.card-body {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: #fffcfc;
-    flex-grow: 1;
-    padding: 26px; 
+    padding: 26px;
 }
 
-.upper-logo{
+.upper-logo {
     width: 200px;
     margin-bottom: 30px;
 }
 
-.bottom-logo{
+.bottom-logo {
     width: 100px;
     margin-top: 10px;
 }
 
-.card-body p{
-    margin-top: 4px ;
+.card-body p {
+    margin-top: 4px;
     color: #888;
     text-align: center;
 }
 
+/* Form Section */
+.form-pengecekan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 26px;
+    height: inherit;
+}
+
 form {
     width: 100%;
-    max-width: 800px; /* Membatasi lebar maksimal untuk kenyamanan baca */
+    max-width: 800px; /* Restricts form width for better readability */
     margin-top: 20px;
 }
 
-form label, form input, form select{
+form label, form input, form select {
     width: 100%;
     margin-bottom: 15px;
-    padding: 8px 22px 8px 22px;
-    
+    padding: 8px 22px;
     box-sizing: border-box;
     border-radius: 10px;
     border: solid 2px var(--darkblue);
-    
-    color: var(--blue);
+    color: var(--darkblue);
     font-size: 16px;
     font-weight: bold;
-    
-
 }
 
-form input:focus{
+form input:focus {
     outline: none;
     border: solid 2px var(--darkblue);
 }
 
-form input::placeholder{
+form input::placeholder {
     color: var(--darkblue);
-    font-weight: bold   ;
+    font-weight: bold;
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
+    font-weight: bold;
     float: right;
-    background-color: var(--darkblue) ;
-    color: white;
+    background-color: white;
+    color: var(--darkblue);
     border-radius: 26px;
     border: none;
 }
 
-td{
+/* Table Section */
+table {
+    padding-bottom: 2rem;
+}
+
+tr {
+    background-color: white;
+    color: var(--darkblue);
+}
+
+td {
     padding: 20px;
 }
 
+/* Back Button */
+.back-button {
+    position: fixed;
+    margin: 10px;
+}
 
-@media (max-width: 360px) {
-    .card{
+.back-button img {
+    width: 4.5rem;
+}
+
+/* Headings */
+h2 {
+    color: white;
+    padding: 26px;
+    border-radius: 12px;
+}
+
+h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+/* Container Sections */
+.Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Content {
+    display: flex;
+    align-items: center;
+}
+
+.content_auth {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive Styles */
+/* Mobile */
+@media (max-width: 480px) {
+    .card {
         width: 300px;
     }
 
-    .card-body .upper-logo{
+    .card-body .upper-logo {
         width: 150px;
     }
 
-    .card-body .bottom-logo{
+    .card-body .bottom-logo {
         width: 90px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .card {
+        width: 450px;
+    }
+
+    .card-body .upper-logo {
+        width: 175px;
+    }
+
+    .card-body .bottom-logo {
+        width: 100px;
     }
 }
