@@ -18,7 +18,7 @@ require './database/submit_form_pengambilan.php'
     <h2 class="title">Form Pengambilan Item P3K</h2>
     <div class="form-pengecekan">
         <form method="post" action="./database/submit_form_pengambilan.php">
-            <input type="text" name="Nama" placeholder="Nama" required>
+        <input type="text" name="Nama" placeholder="Nama" required>
         <input type="date" name="Tanggal" required>
         <select name="Barang" required>
             <option value="">Pilih Barang</option>

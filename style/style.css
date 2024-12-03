@@ -108,12 +108,16 @@ button {
     font-size: 16px;
     font-weight: bold;
     float: right;
-    background-color: white;
-    color: var(--darkblue);
+    background-color: var(--darkblue);
+    color: white;
     border-radius: 26px;
     border: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+button:hover{
+    background-color: var(--ligthgreen);
+}
 /* Table Section */
 table {
     padding-bottom: 2rem;
@@ -196,4 +200,8 @@ h3 {
     .card-body .bottom-logo {
         width: 100px;
     }
+}
+
+::-webkit-scrollbar{
+    visibility: hidden;
 }
