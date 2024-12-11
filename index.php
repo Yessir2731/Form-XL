@@ -29,14 +29,6 @@ session_start();
     </div>
 
     <div class="card-container">
-        <div class="card">  
-            <div class="card-body">  
-                <a href="form_pengambilan_p3k.php" class="card-text">
-                    <img src="image/hugeicons_first-aid-kit-public.png" alt="icon" class="icon">
-                    P3K (public)
-                </a>
-            </div>
-        </div>
         <div class="card">
             <div class="card-body">  
                 <a href="private/form_p3k.php" class="card-text">

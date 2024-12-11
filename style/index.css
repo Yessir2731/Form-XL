@@ -56,16 +56,16 @@ span{
 .card {
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 400px;
     border-radius: 46px;
     box-shadow: 2px 7px 13px 0px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    margin: 10px; /* Adds spacing between cards */
+    margin: 5px; /* Adds spacing between cards */
 }
 
 .card-body {
     background-color: #fffcfc;
-    padding: 8px;
+    padding: 16px;
     flex-grow: 1;
 }
 
